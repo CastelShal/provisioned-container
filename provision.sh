@@ -35,5 +35,6 @@ echo "Password: $pass"
 docker build --build-arg pass=$pass -t cynosure .
 docker run --network=labnet -d -p $port:22 cynosure
 
+sudo ufw allow $port
 #gitlab 172.19.0.3:8929
 #penpot 172.19.0.2
